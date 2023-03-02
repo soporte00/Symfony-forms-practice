@@ -3,6 +3,14 @@
         <a class="navbar-brand" href="{{ path('index')}}"> Symfony/form </a>
 
         <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('index') }}">Home</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('app_category') }}">Categorías</a>
+            </li> 
+
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('contact-v1') }}">Contactos #1</a>
             </li>
@@ -11,7 +19,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('contact-v3') }}">Contactos #3</a>
-            </li>        
+            </li>         
         </ul>
     </div>  
 </nav>
