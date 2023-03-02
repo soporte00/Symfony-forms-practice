@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact v3{% endblock %}
+
+{% block body %}
+    <h1>Formulario V3</h1>
+
+    {% form_theme form 'bootstrap_5_horizontal_layout.html.twig' %}
+    {{
+        form_start(form,{
+            'method': 'POST',
+            'attr': {'novalidate':'novalidate'}
+        })
+    }}
+
+    {{form_widget(form)}}
+
+    {# 
+    {{form_errors(form)}}
+    
+    {{ form_row(form.message, {
+        'label':'Comentario',
+        'attr': {'maxlength': 10}
+    }) }}
+
+
+    <div>
+        {{form_errors(form.email)}}
+        {{ form_row(form.email) }}
+    </div> #}
+
+    {{form_end(form)}}
+
+{% endblock %}

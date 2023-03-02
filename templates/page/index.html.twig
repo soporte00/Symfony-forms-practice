@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <h1 class='d-flex align-items-center justify-content-between'>
+        Home  <a href="{{ path('app_post_create') }}" class="btn btn-dark btn-sm">Crear Post</a>
+    </h1>
+
+    <table class="table table-striped">
+        <tbody>
+            {% for post in posts %}
+                <tr>
+                    <td>{{post.title}} - [{{post.category}}]</td>
+                    <td>
+                        <a href="{{ path('app_post_edit',{id: post.id})}}">Editar</td>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,8 @@
+{# Leer un tipo #}
+{% for m_success in app.flashes('success') %}
+    <div class='alert alert-success'>{{ m_success }}</div>
+{% endfor %}
+
+{% for m_info in app.flashes('info') %}
+    <div class='alert alert-info'>{{ m_info }}</div>
+{% endfor %}
